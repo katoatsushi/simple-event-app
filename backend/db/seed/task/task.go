@@ -15,7 +15,7 @@ var Seeds = struct {
 }{}
 
 func CreateSampleData(db *gorm.DB) {
-	filepaths, _ := filepath.Glob(filepath.Join("/go/src/github.com/team-lab/pkg-booking-core/backend/db", "data", "*.json"))
+	filepaths, _ := filepath.Glob(filepath.Join("/go/src/github.com/simple-event-app/backend/db", "data", "*.json"))
 	if err := configor.Load(&Seeds, filepaths...); err != nil {
 		panic(err)
 	}
