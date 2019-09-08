@@ -11,6 +11,7 @@ func NewRouter(db *gorm.DB) *gin.Engine {
 
 	mainRouter := router.Group("evet_app")
 	controller.CreateEvent(mainRouter)
+	controller.CreateTag(mainRouter)
 
 	return router
 }

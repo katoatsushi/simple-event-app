@@ -6,5 +6,6 @@ import "github.com/simple-event-app/backend/models/repository"
 var Configure = struct {
 	Repository struct {
 		EventRepository repository.EventRepository
+		TagRepository   repository.TagRepository
 	}
 }{}

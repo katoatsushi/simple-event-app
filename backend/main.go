@@ -27,6 +27,7 @@ func main() {
 	var err error
 
 	module.Configure.Repository.EventRepository = &repository.EventMysql{DbCon: db}
+	module.Configure.Repository.TagRepository = &repository.TagMysql{DbCon: db}
 
 	// server init
 	r := server.NewRouter(db)
